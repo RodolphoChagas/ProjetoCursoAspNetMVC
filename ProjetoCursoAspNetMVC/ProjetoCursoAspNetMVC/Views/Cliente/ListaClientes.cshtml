@@ -1,0 +1,25 @@
+﻿@model List<ProjetoCursoAspNetMVC.Models.Cliente>
+
+
+@{
+    ViewBag.Title = "ListaClientes";
+}
+
+<h2>ListaClientes</h2>
+
+@foreach (var cliente in Model)
+{
+    <li>@Html.DisplayFor(model => cliente.Nome)</li>
+}
+
+
+@section scripts
+{    
+    <script>
+        $(document).ready(function () {
+            $("li").click(function () {
+                $(this).hide();
+            });
+        });
+    </script>    
+}

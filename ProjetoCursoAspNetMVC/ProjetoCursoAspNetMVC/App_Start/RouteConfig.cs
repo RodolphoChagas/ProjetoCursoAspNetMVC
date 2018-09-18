@@ -13,6 +13,13 @@ namespace ProjetoCursoAspNetMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+
+            routes.MapRoute(
+            name: "Secundaria",
+            url: "{controller}/{action}/{id}/{nome}",
+            defaults: new { controller = "Home", action = "Index"}
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
