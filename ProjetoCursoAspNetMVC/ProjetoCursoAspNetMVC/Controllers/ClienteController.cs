@@ -24,6 +24,7 @@ namespace ProjetoCursoAspNetMVC.Controllers
             return View(cliente);
         }
 
+        
 
         public ActionResult ListaClientes()
         {
@@ -32,6 +33,15 @@ namespace ProjetoCursoAspNetMVC.Controllers
                 new Cliente() { Nome = "João", SobreNome = "Pedro", DataCadastro = DateTime.Now, ClienteId = 1 },
                 new Cliente() { Nome = "Fulano", SobreNome = "Beltrano", DataCadastro = DateTime.Now, ClienteId = 2 }
             };
+
+            var clientes2 = new List<Cliente>()
+            {
+                new Cliente() { Nome = "João2", SobreNome = "Pedro2", DataCadastro = DateTime.Now, ClienteId = 1 },
+                new Cliente() { Nome = "Fulano2", SobreNome = "Beltrano2", DataCadastro = DateTime.Now, ClienteId = 2 }
+            };
+
+
+            ViewBag.Cliente = clientes2;
 
 
             return View(clientes);

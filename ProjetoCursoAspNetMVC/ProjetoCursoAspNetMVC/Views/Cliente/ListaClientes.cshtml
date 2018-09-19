@@ -7,19 +7,32 @@
 
 <h2>ListaClientes</h2>
 
+
+
+
+
+
 @foreach (var cliente in Model)
 {
     <li>@Html.DisplayFor(model => cliente.Nome)</li>
 }
 
+@foreach (var cliente in ViewBag.Cliente)
+{
+    <li>@cliente.Nome</li>
+}
+
+
+
+
 
 @section scripts
-{    
+{
     <script>
         $(document).ready(function () {
             $("li").click(function () {
                 $(this).hide();
             });
         });
-    </script>    
+    </script>
 }
